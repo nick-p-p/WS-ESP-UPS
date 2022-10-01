@@ -1,0 +1,9 @@
+Sin datos!
+Error: frase no encontrada en el diccionario
+Falta el argumento:
+Par&aacute;metros incorrectos!
+Reinicio del sistema
+Guardado con éxito
+Ning&uacute;n cambio
+Zona horaria no v&aacute;lida, predeterminada...
+Idioma del sistema

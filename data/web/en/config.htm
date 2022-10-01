@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>Power</title>
+    <link rel="stylesheet" href="/mystyle.css">
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+      function restartESP32(){
+        if (confirm('Confirm, restart the system now.'))
+        {
+          return bDcallAndReplaceFields('/page?action=restart&UID=307');
+        }
+        else
+        {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+
+      <h1>System Management</h1>
+      <br>
+      <form action="/en/locale.htm" method="get">
+        <button><i class="fas fa-globe"></i> Locale settings</button>
+      </form>
+      <br>
+      <br>
+      <form action="/en/files.htm"method="get">
+        <button><i class="fas fa-file"></i> File Management</button>
+      </form>
+      <br>
+      <br>
+      <form action="/en/info.htm" method="get">
+        <button><i class="fas fa-info-circle"></i>&nbsp;System Information</button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br>      
+      <form onsubmit="event.preventDefault(); return restartESP32();">
+        <button><i class="fa fa-refresh"></i> Save & Reboot</button>
+      </form>
+      <div id=confirmation></div>
+      <br>
+      <br>
+      <form action="/" method="get">
+        <button><i class="fas fa-home"></i> Home</button>
+    </form>
+
+    </div>
+  </body>
+</html>

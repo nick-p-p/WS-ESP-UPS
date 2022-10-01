@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>Power</title>
+
+    <link rel="stylesheet" href="/mystyle.css">
+
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+        window.onload = bDloadBlocksThenData;
+    </script>
+
+</head>
+
+
+
+<body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+        <h1>Configuraci&oacute;n regional</h1>
+        <div id="tzDiv" name="tzDiv" class="UIsection" UID='300'>
+            <br>
+            <h3>Zona horaria</h3>
+            <br />
+            <form onsubmit="event.preventDefault(); return bDsavePageData('tzDiv');">
+                Seleccionar zona horaria: <div id='zoneselection' name='zoneselection' class="UIblock" UID='300'></div>
+                <br>
+                <input id='UID' name='UID' type='hidden' value='300'>
+                <button><i class='fas fa-save'></i> Guardar</button>
+            </form>
+
+            <br>
+            <div id="confirmation"> </div>
+            <br>
+        </div>
+
+        <div id="preferences" name="preferences" class="UIsection" UID='311'>
+            <h3>Las preferencias</h3>
+
+            <form onsubmit="event.preventDefault(); return bDsavePageData('preferences');">
+
+
+                <div id='localunits' name='localunits' class="UIblock" UID='311'></div>
+
+                <div id='langoption' name='langoption' class="UIblock" UID='311'></div>
+
+                <div>
+                    Activar depuraci&oacute;n:<br>
+                    <select id='msgdebug' name='msgdebug'>
+                        <option value="0">Desactivado</option>
+                        <option value="1">Solo errors</option>
+                        <option value="2">Avisos</option>
+                        <option value="3">Informativo</option>
+                        <option value="4">Datos de depuraci&oacute;n</option>
+                        <option value="5">Diagn&oacute;sticos detallado</option>
+                    </select>
+                    <br>
+                    <br>
+                    
+                    <button><i class='fas fa-save'></i> Guardar</button>
+                </div>
+            </form>
+
+            <div id="confirmation"> </div>
+            <br>
+        </div>
+
+        <br>
+
+        <form action="/" method="get">
+            <button><i class="fas fa-home"></i> La p&aacute;gina principal</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

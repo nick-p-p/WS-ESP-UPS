@@ -1,0 +1,13 @@
+
+Seleccione unidades de temperatura:<br>
+<select id='tempunits' name='tempunits'>
+    <option value="0">Fahrenheit</option>
+    <option value="1">Celsius</option>
+</select>
+<br>
+<br>
+Seleccione el orden de fecha:<br>
+<select id='dateorder' name='dateorder'>
+    <option value="0">US: Mes/Dia/A&ntilde;o</option>
+    <option value="1">Normal: Dia/Mes/A&ntilde;o</option>
+</select>

@@ -1,0 +1,8 @@
+(GMT): United Kingdom|GMT0BST,M3.5.0/1:00:00,M10.5.0/2:00:00
+(GMT +1): Central Europe|CET-1CEST,M3.5.0/2,M10.5.0/3
+(GMT -5): Eastern US|EST5EDT,M3.2.0/2,M11.1.0
+(GMT -6): Central US|CST6CDT,M3.2.0/2,M11.1.0/2
+(GMT -7): Mountain US|MST7MDT,M3.2.0/2,M11.1.0/2
+(GMT -8): Pacific US|PST8PDT,M3.2.0/2,M11.1.0/2
+(GMT -7): Arizona|AZT7
+(GMT -5): Colombia|COL5
