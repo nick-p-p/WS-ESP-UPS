@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Alexa Gateway</title>
+  <link rel="stylesheet" href="/mystyle.css">
+  <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+</head>
+
+<body>
+
+  <body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+
+      <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+      <script>
+        function setIfEx(name, value) {
+          var myEle = document.getElementById(name);
+          if (myEle) {
+            if (myEle.tagName === 'SELECT') {
+              myEle.value = value;
+            }
+            else {
+              myEle.innerHTML = value;
+            }
+          }
+        }
+      </script>
+      <form method='POST' action='#' enctype='multipart/form-data' id='upload_form'>
+        <h1>Upload SPIFFS</h1>
+        <br>
+        Use this page to upload new files to SPIFFS.
+        <br>
+        <br>
+        Target folder:
+        <!-- note the values need to be the full path except the filename ie. end in / -->
+        <select id='folder' name='folder'>
+          <option value="/web/">web root (/web)</option>
+          <option value="/web/en/">English (/web/en)</option>
+          <option value="/web/es/">Espanol (/web/es)</option>
+          <option value="/">data root (/)</option>
+        </select>
+
+        <br>
+        <br>
+        <input type='file' name='uploadspiffs'>
+
+        <input type='submit' value='Upload'>
+        <br>
+        <br>
+        <div id=confirmation></div>
+
+      </form>
+
+      <div id='prg'>progress: 0%</div>
+      <script>
+        $('form').submit(function (e) {
+          e.preventDefault();
+          var form = $('#upload_form')[0];
+          var data = new FormData(form);
+          setIfEx('confirmation', '');
+          $.ajax({
+            url: '/uploadspiffs',
+            type: 'POST',
+            data: data,
+            contentType: false,
+            processData: false,
+            xhr: function () {
+              var xhr = new window.XMLHttpRequest();
+              xhr.upload.addEventListener('progress', function (evt) {
+                if (evt.lengthComputable) {
+                  var per = evt.loaded / evt.total;
+                  $('#prg').html('progress: ' + Math.round(per * 100) + '%');
+                }
+              }, false);
+              return xhr;
+            },
+            success: function (result,status,xhr) {
+              setIfEx('confirmation', result);
+              console.log('success!')
+            },
+            error: function (xhr,status,error) { 
+              setIfEx('confirmation', 'Error: ' + error);
+            }
+          });
+        });
+      </script>
+
+      <br />
+      <br />
+      <br />
+      <br>
+      <form action="/" method="get">
+        <button><i class="fas fa-home"></i> Home</button>
+      </form>
+
+    </div>
+  </body>
+</body>
+
+</html>

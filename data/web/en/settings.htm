@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Power</title>
+
+    <link rel="stylesheet" href="/mystyle.css">
+
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+        window.onload = bDloadPageData;
+    </script>
+
+</head>
+
+<body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+        <div id="settings" name="settings" class="UIsection" UID='10'>
+            <h1>Configure timings for on/off</h1>
+            <br><br>
+            Enter new values and hit save. Blank values are ignored.
+            <br><br>
+            <form onsubmit="event.preventDefault(); return bDsavePageData('settings');">
+                <table>
+                    <tr>
+                        <th>Action</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Turn on</td>
+                        <td>
+                            <select name="pwrOn" id="pwrOn">
+                                <option value="0">Midnight</option>
+                                <option value="1">1 A.M.</option>
+                                <option value="2">2 A.M.</option>
+                                <option value="3">3 A.M.</option>
+                                <option value="4">4 A.M.</option>
+                                <option value="5">5 A.M.</option>
+                                <option value="6">6 A.M.</option>
+                                <option value="7">7 A.M.</option>
+                                <option value="8">8 A.M.</option>
+                                <option value="9">9 A.M.</option>
+                                <option value="10">10 A.M.</option>
+                                <option value="11">11 A.M.</option>
+                                <option value="12">noon</option>
+                                <option value="13">1 P.M.</option>
+                                <option value="14">2 P.M.</option>
+                                <option value="15">3 P.M.</option>
+                                <option value="16">4 P.M.</option>
+                                <option value="17">5 P.M.</option>
+                                <option value="18">6 P.M.</option>
+                                <option value="19">7 P.M.</option>
+                                <option value="20">8 P.M.</option>
+                                <option value="21">9 P.M.</option>
+                                <option value="22">10 P.M.</option>
+                                <option value="23">11 P.M.</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Turn off</td>
+                        <td>
+                            <select name="pwrOff" id="pwrOff">
+                                <option value="0">Midnight</option>
+                                <option value="1">1 A.M.</option>
+                                <option value="2">2 A.M.</option>
+                                <option value="3">3 A.M.</option>
+                                <option value="4">4 A.M.</option>
+                                <option value="5">5 A.M.</option>
+                                <option value="6">6 A.M.</option>
+                                <option value="7">7 A.M.</option>
+                                <option value="8">8 A.M.</option>
+                                <option value="9">9 A.M.</option>
+                                <option value="10">10 A.M.</option>
+                                <option value="11">11 A.M.</option>
+                                <option value="12">noon</option>
+                                <option value="13">1 P.M.</option>
+                                <option value="14">2 P.M.</option>
+                                <option value="15">3 P.M.</option>
+                                <option value="16">4 P.M.</option>
+                                <option value="17">5 P.M.</option>
+                                <option value="18">6 P.M.</option>
+                                <option value="19">7 P.M.</option>
+                                <option value="20">8 P.M.</option>
+                                <option value="21">9 P.M.</option>
+                                <option value="22">10 P.M.</option>
+                                <option value="23">11 P.M.</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </table>
+                <br>
+                <br>
+
+                Note changing the name will cause the system to restart and you must ask
+                Alexa to "discover devices" to pick up the change.
+
+                <br>
+                <br>
+
+                Name: <input type="text" size="12" name="devname" , id="devname">
+
+                <br>
+                <br>
+                Enable built in LED: <input type='checkbox' name='toggleBuiltIn' id='toggleBuiltIn' /></td>
+                <br>
+                <br>
+                <button width="100"><i class='fas fa-save'></i>&nbsp;Save</button>
+            </form>
+            <div id="confirmation"> </div>
+        </div>
+
+
+        <br />
+        <br>
+        <form action="/" method="get">
+            <button><i class="fas fa-home"></i> Home</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <title>Power</title>
+    <link rel="stylesheet" href="/mystyle.css">
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+        window.onload = bDloadPageData;
+    </script>
+</head>
+
+<body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+
+        <h1>Wifi</h1>
+        <div id="wifi" name="wifi" class="UIsection" UID='315'>
+
+            Current connection<br>
+            &nbsp;SSID: <span id="SSID" name="SSID"></span><br>
+            &nbsp;IP: <span id="IP" name="IP"></span><br>
+
+            <br>
+            <form onsubmit="event.preventDefault(); return saveDiv('wifi');">
+                <b>Wifi mode: </b>
+                <select id='wifiMode' name='wifiMode'>
+                    <option value="0">hotspot</option>
+                    <option value="1">connected</option>
+                    <option value="2">connected with fallback to hotspot</option>
+                </select>
+                <br>
+                Options are:<br>
+                &NonBreakingSpace;&NonBreakingSpace;"connected" to existing wifi or <br>
+                &NonBreakingSpace;&NonBreakingSpace;"hotspot" with own hotspot 'LEDs'<br>
+
+                <br>
+                <br>
+
+                <div id="confirmation"> </div>
+                <br>
+
+                <input id='UID' name='UID' type='hidden' value='315'>
+                <button><i class='fas fa-save'></i> Save</button>
+            </form>
+        </div>
+
+        <br />
+
+        <form action="/" method="get">
+            <button><i class="fas fa-home"></i> Home</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <title>Power</title>
+
+  <link rel="stylesheet" href="/mystyle.css">
+
+  <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+  <script src="/bdscripts.js"></script>
+  <script>
+    setInterval(function () { bDrefreshData(); }, 30000);
+
+    window.onload = bDloadBlocksThenData;
+  </script>
+
+</head>
+
+<body>
+  <div style='text-align:left;display:inline-block;min-width:260px;'>
+
+    <h1>Power Controller</h1>
+    <br>
+    <!-- This is where all the panel data goes-->
+    <div id="status" name="status" class="UIsection" UID='10'>
+      <table width='100%'>
+        <tbody>
+          <tr>
+            <td>Power is: </td>
+            <td id='currState' name='currState'>&nbsp;?</td>
+          </tr>
+          <tr>
+            <td>Next change at: </td>
+            <td id='nextChg' name='nextChg'>&nbsp;?</td>
+          </tr>
+          <tr>
+            <td>Known as: </td>
+            <td id='devname' name='devname'>&nbsp;?</td>
+          </tr>
+          <tr>
+            <td><br>Manual</td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table width='100%'>
+        <tbody>
+          <tr>
+            <td>
+              <form onsubmit="event.preventDefault(); return bDcustomDataAction('On');">
+                <button><i class="fas fa-lightbulb"></i>&nbsp;On</button>
+              </form>
+            </td>
+            <td>
+              <form onsubmit="event.preventDefault(); return bDcustomDataAction('Off');">
+                <button><i class="far fa-lightbulb"></i>&nbsp;Off</button>
+              </form>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <br>
+    <form action="/en/settings.htm" method="get">
+      <button><i class="fas fa-clock"></i> Change times and name</button>
+    </form>
+    <br>
+    <br>
+    <form action="/en/config.htm" method="get">
+      <button><i class="fas fa-cog"></i> Configure System</button>
+    </form>
+  </div>
+</body>
+
+
+</html>

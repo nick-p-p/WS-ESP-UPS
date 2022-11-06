@@ -32,7 +32,7 @@ PubSubClient pubSubClient(wifiClient);
 MQTTIntf mQTTIntf = MQTTIntf(&pubSubClient);
 
 #include <Adafruit_INA219.h>
-Adafruit_INA219 ina219;
+Adafruit_INA219 ina219(0x42);
 
 /*
  * call back to get messages from network
@@ -47,6 +47,7 @@ void setup() {
   infra.enableSerialLogging(&Serial);
   infra.enableTelnetLogging();
 
+
   if (!SPIFFS.begin())
   {
     SPIFFS.format();
@@ -57,8 +58,9 @@ void setup() {
 
 
   ILogger::setLevel(l_diagnostics);
+   Wire.begin (21, 22);
 
-    if (! ina219.begin()) {
+    if (! ina219.begin(&Wire)) {
     Serial.println("Failed to find INA219 chip");
     while (1) { delay(10); }
   }
@@ -142,5 +144,6 @@ void loop()
   delay(100);
   checkIfRestartNeeded();
   checkMQTT();
-  // myFan.loop();
+  readPower();
+  delay(10000);
 }

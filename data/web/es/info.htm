@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>Power</title>
+
+    <link rel="stylesheet" href="/mystyle.css">
+
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+        window.onload = bDloadBlocksThenData;
+    </script>
+
+</head>
+
+<body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+        <h1>Informaci&oacute;n del sistema</h1>
+
+        <!-- to pull back system data -->
+        <div id="buildinfo" name="buildinfo" class="UIsection" UID='307'></div>
+
+        <table>
+            <tr>
+                <td colspan="2" class="ds-labels">Informaci&oacute;n de firmware</td>
+            </tr>
+            <tr>
+                <td>La vers&iacute;on:</td>
+                <td id="sysver"></td>
+            </tr>
+            <tr>
+                <td>Fecha:</td>
+                <td id="compdate"></td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <div id="sysInfo" name="sysInfo" class="UIsection" UID='308'>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="ds-labels">Sketch</td>
+            </tr>
+            <tr>
+                <td>Sdk Version</td>
+                <td id="sdkVersion">?</td>
+            </tr>
+
+            <tr>
+                <td>Sketch Size</td>
+                <td id="sketchSize">?</td>
+            </tr>
+            <tr>
+                <td>Free Sketch Space</td>
+                <td id="freeSketchSpace">?</td>
+            </tr>
+
+        </table>
+        <br>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="ds-labels">CPU</td>
+            </tr>
+            <tr>
+                <td>CPU Model</td>
+                <td id="chipModel">?</td>
+            </tr>
+
+            <tr>
+                <td>CPU revision</td>
+                <td id="chipRevision">?</td>
+            </tr>
+            <tr>
+                <td>CPU cores</td>
+                <td id="chipCores">?</td>
+            </tr>
+            <tr>
+                <td>CPU frequency</td>
+                <td id="cpuFreqMHz">?</td>
+            </tr>
+        </table>
+        <br>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="ds-labels">Flash</td>
+            </tr>
+            <tr>
+                <td>Flash size</td>
+                <td id="flashChipSize">?</td>
+            </tr>
+            <tr>
+                <td>Flash speed</td>
+                <td id="flashChipSpeed">?</td>
+            </tr>
+
+        </table>
+        <br>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="ds-labels">Heap</td>
+            </tr>
+            <tr>
+                <td>Heap Size</td>
+                <td id="heapSize">?</td>
+            </tr>
+            <tr>
+                <td>Free heap</td>
+                <td id="freeHeap">?</td>
+            </tr>
+            <tr>
+                <td>Minimum heap</td>
+                <td id="minFreeHeap">?</td>
+            </tr>
+            <tr>
+                <td>Largest heap available</td>
+                <td id="maxAllocHeap">?</td>
+            </tr>
+        </table>
+        <br>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="ds-labels">PSRAM</td>
+            </tr>
+            <tr>
+                <td>PS RAM size</td>
+                <td id="psramSize">?</td>
+            </tr>
+            <tr>
+                <td>PS RAM free</td>
+                <td id="freePsram">?</td>
+            </tr>
+            <tr>
+                <td>Largest PS RAM available</td>
+                <td id="maxAllocPsram">?</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <br>
+    <br>
+    <form action="/" method="get">
+        <button><i class="fas fa-home"></i> Home</button>
+    </form>
+
+    </div>
+</body>
+
+</html>

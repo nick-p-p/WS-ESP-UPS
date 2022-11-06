@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>LEDs</title>
+
+    <link rel="stylesheet" href="/mystyle.css">
+
+    <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+    <script src="/bdscripts.js"></script>
+    <script>
+      window.onload = loadBlocksThenData;
+    </script>
+
+</head>
+
+<body>
+    <div style='text-align:left;display:inline-block;min-width:260px;'>
+        <h1>Preferencias del sistema</h1>
+        <h1>Seleccionar zona horaria</h1>
+        <br />
+        <form onsubmit="event.preventDefault(); return saveData('form');">
+            Seleccionar zona horaria: <div id='zoneselection'></div>
+
+            <input id='UID' name='UID' type='hidden' value='300'>
+            <button><i class='fas fa-save'></i> Guardar</button>
+        </form>   
+
+        <br>
+        <div id="confirmation"> </div>
+        <br>
+
+        <form action="/" method="get">
+            <button><i class="fas fa-home"></i> La p&aacute;gina principal</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

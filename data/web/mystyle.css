@@ -1,0 +1,47 @@
+.c{
+    text-align: center;
+} 
+
+div,input{
+    padding:5px;
+    font-size:1em;
+} 
+
+body{
+    text-align: center;
+    font-family:verdana;
+} 
+
+button{
+    border:0;
+    border-radius:0.3rem;
+    background-color:#1fa3ec;
+    color:#fff;
+    line-height:2.4rem;
+    font-size:1.2rem;
+    width:100%;
+} 
+
+.q{
+    float: right;
+    width: 64px;
+    text-align: right;
+} 
+      
+html {
+     font-family: Arial;
+     display: inline-block;
+     margin: 0px auto;
+     text-align: center;
+}
+
+h2 { font-size: 3.0rem; }
+
+p { font-size: 1.3rem; }
+
+.units { font-size: 1.2rem; }
+.ds-labels{
+    font-size: 1.5rem;
+    vertical-align:middle;
+    padding-bottom: 15px;
+}

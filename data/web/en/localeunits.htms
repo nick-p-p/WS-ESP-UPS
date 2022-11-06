@@ -1,0 +1,13 @@
+
+Select Temperature Units:<br>
+<select id='tempunits' name='tempunits'>
+    <option value="0">Fahrenheit</option>
+    <option value="1">Celsius</option>
+</select>
+<br>
+<br>
+Select Date Order:<br>
+<select id='dateorder' name='dateorder'>
+    <option value="0">US: Month/Day/Year</option>
+    <option value="1">Non US: Day/Month/Year</option>
+</select>

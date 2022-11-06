@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <title>Alexa Gateway</title>
+
+  <link rel="stylesheet" href="/mystyle.css">
+
+  <script src="https://kit.fontawesome.com/a8b19a0264.js"></script>
+  <script src="/mhscripts.js"></script>
+  <script>
+    window.onload = refreshData;
+  </script>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style='text-align:left;display:inline-block;min-width:260px;'>
+    <div id="medications" name="medications" class="UIsection" UID='306'>
+      <h1>Medications</h1>
+      <br />
+      <br>
+      <H3>Pain Medications</H3>
+      <br>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Alexa Name</th>
+          <th>Edit</th>
+        </tr>
+
+        <tr>
+          <td>0</td>
+          <td id="desc0"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=0'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td id="desc1"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=1'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td id="desc2"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=2'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="desc3"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=3'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="desc4"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=4'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td id="desc5"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=5'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td id="desc6"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=6'" type="button">Edit</button></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td id="desc7"> </td>
+          <td><button onclick="location.href='/en/editMed.htm?IDX=7'" type="button">Edit</button></td>
+        </tr>
+      </table>
+
+      <br />
+      <br>
+    </div>
+
+    <form action="/" method="get">
+      <button><i class="fas fa-home"></i> Home</button>
+    </form>
+
+  </div>
+</body>
+
+</html>
